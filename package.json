@@ -1,0 +1,25 @@
+{
+  "name": "simple-heroku-proxy",
+  "version": "1.0.0",
+  "description": "A simple proxy app for deploying to Heroku",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec 'node -r dotenv/config' index.js"
+  },
+  "keywords": [
+    "proxy",
+    "heroku"
+  ],
+  "author": "homerjam",
+  "license": "MIT",
+  "dependencies": {
+    "forever": "^0.15.3",
+    "http-proxy": "^1.16.2"
+  },
+  "devDependencies": {
+    "dotenv": "^5.0.0",
+    "eslint": "^4.18.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.9.0"
+  }
+}
