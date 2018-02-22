@@ -1,3 +1,4 @@
+const _ = require('lodash');
 const http = require('http');
 const httpProxy = require('http-proxy');
 
@@ -8,6 +9,16 @@ const proxy = httpProxy.createProxyServer({
   changeOrigin: true,
   secure: false,
   xfwd: true,
+});
+
+proxy.on('proxyRes', (proxyRes) => {
+  // eslint-disable-next-line
+  proxyRes.headers = _.mapValues(proxyRes.headers, value => {
+    if (!_.isString(value)) {
+      return value;
+    }
+    return _.uniq(value.replace(/(,\s)/g, ',').split(',')).join(',');
+  });
 });
 
 const server = http.createServer((req, res) => {
