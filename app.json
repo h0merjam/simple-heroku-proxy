@@ -3,7 +3,7 @@
   "name": "Simple Heroku Proxy",
   "description": "A simple node based proxy",
   "repository": "https://github.com/homerjam/simple-heroku-proxy",
-  "logo": "https://cdn.rawgit.com/heroku/node-js-sample/master/public/node.svg",
+  "logo": "https://cdn.jsdelivr.net/gh/heroku/node-js-sample/public/node.svg",
   "keywords": [
     "proxy"
   ],
