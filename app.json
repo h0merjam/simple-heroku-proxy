@@ -1,16 +1,15 @@
-
 {
   "name": "Simple Heroku Proxy",
   "description": "A simple node based proxy",
   "repository": "https://github.com/homerjam/simple-heroku-proxy",
-  "logo": "https://cdn.rawgit.com/heroku/node-js-sample/master/public/node.svg",
+  "logo": "https://raw.githubusercontent.com/homerjam/simple-heroku-proxy/master/logo.svg",
   "keywords": [
     "proxy"
   ],
   "env": {
-    "TARGET": {
-      "description": "Proxy target URL",
-      "value": "https://"
+    "CONFIG": {
+      "description": "JSON config object",
+      "value": "{ \"targets\": [{ \"target\": \"https://\", \"route\": \"/\" }] }"
     }
   }
 }
